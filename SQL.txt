@@ -1,0 +1,97 @@
+SQL-Structure query  Languages
+Table format 
+using json-javascript Object Notation
+KEY AND VALUES paiRS
+Datatypes
+varchar 
+char 
+int 
+binary
+50-int
+"Preethi"-String
+VARCHAR
+CHAR
+SQL-Table create
+create table tablename(column name1 ,column name2 ........);
+EX:
+create table student(rollno int,name varchar(50));
+DDL-Data Defintion Language
+operation:
+create
+Alter
+Drop
+Truncate
+
+DML-Data Manipulation Language
+Operations:
+select 
+insert
+update 
+delete
+
+TCL-Trasaction Control Languages
+commit 
+rollback
+
+
+
+create database Sp;
+use Sp;
+create table office(emp_id  int not null,emp_name varchar(100) not null, Age int not null,Address char(50),salary int ,primary key(emp_id));
+desc office;
+select * from office;
+insert into office values(101,'Preethi',22,'Thiruvarur',50000);
+insert into office values(102,'Preethi',22,'Thiruvarur',50000);
+drop table office;
+
+-- DDLCOMMANDS
+create table office(emp_id  int not null,emp_name varchar(100) not null, Age int not null,Address char(50),salary int ,primary key(emp_id));
+alter table office add designation varchar(100);
+alter table office drop designation;
+alter table office modify emp_name varchar(150);
+alter table office add column designation varchar(100);
+alter table office change Address Location varchar(100);
+rename table office to office_data;
+select * from office_data;
+drop table office_data;
+-- DMLCOMMANDS
+select * from office;
+insert into office values(101,'Sivasankari',22,'Trichy',85000);
+insert into office values(102,'Preethi',23,'Thanjavur','950000');
+insert into office values(103,'Divya',24,'Pollachi','50000');
+insert into office values(104,'Dhanusha',25,'Salem','55000');
+update office set Address='Bangalore' where Address='Pollachi';
+update office set Age=45 where Age=24;
+update office set Age=40 where emp_name='Dhanusha';
+delete from office where Age=40;
+set sql_safe_updates=0;
+
+OPERATORS:
+create table office_details(emp_id int primary key,emp_name varchar(50),designation varchar(150),salary int);
+desc office_details;
+insert into office_details values(501,'Annamalai','javadevloper',52000);
+insert into office_details values(502,'Sathish','Frontend',65000);
+insert into office_details values(503,'Priya','Backend',85000);
+insert into office_details values(504,'Deepika','Teamlead',95000);
+insert into office_details values(505,'Gowthami','HR',120000);
+insert into office_details values(506,'Rajesh','Sales',55000);
+insert into office_details values(507,'jayaprakash','AssociateEnginner',88000);
+insert into office_details values(508,'Raja','Admin',25000);
+insert into office_details values(509,'Mani','HR',45000);
+insert into office_details values(510,'Aaju','CEO',150000);
+insert into office_details values(511,'Kumar','Sales',35000);
+insert into office_details values(512,'karthick','HR',55000);
+insert into office_details values(513,'Arun','Admin',28000);
+insert into office_details values(514,'Mugil','Teamlead',95000);
+insert into office_details values(515,'vidhya','AssociateEngineer',105000);
+
+select * from office_details;
+
+
+
+
+
+ 
+
+
+
