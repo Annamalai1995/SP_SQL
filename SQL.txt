@@ -105,6 +105,35 @@ select * from office_details where emp_name like '%i%';
 
 
  
+-- DISTINCT ORDER BY CLAUSES
+
+select designation from office_details;
+
+select distinct designation from office_details;
+select * from office_details order by emp_name;
+select * from office_details order by designation;
+select * from office_details order by emp_name desc;
+select * from office_details order by salary,emp_name;
+select * from office_details where designation='HR' order by salary desc;
+
+
+select *  from office_details  order by (case designation 
+when 'CEO' THEN 1
+when 'HR' THEN 2
+When 'Admin' Then 3
+else 50
+END
+);
+
+select *  from office_details  order by (case designation 
+when 'CEO' THEN 1
+when 'HR' THEN 2
+When 'Admin' Then 3
+else 50
+END
+),emp_name;
+
+
 
 
 
