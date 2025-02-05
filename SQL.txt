@@ -143,6 +143,31 @@ select min(salary) from office_details where designation='sales';
 select max(salary) from office_details where designation='Teamlead';
 
 
+-- STRING FUNCTION
+select ucase(emp_name) from office_details;
+select emp_name,char_length(emp_name) char_count from office_details;
+select designation,character_length(designation) char_count from office_details;
+select salary,concat('RS.',salary) from office_details;
+select salary,concat('RS',format(salary,2)) from office_details;
+select emp_name,designation from office_details;
+select emp_name,LEFT(designation,3) from office_details;
+select emp_name,mid(designation,3) from office_details;
+-- DATE AND FUNCTIONS
+alter table office_details add column joindate date;
+select * from office_details;
+set sql_safe_updates=0;
+
+update office_details set joindate="2025-05-02";
+
+select now();
+select date(now());
+select curdate();
+select date_format(curdate(),"%d/%m/%y");
+select date_format(curdate(),"%d-%m-%y");
+select datediff(curdate(),"2026/05/02");
+select datediff(curdate(),"2026/05/02") AS countdays;
+select date_add(curdate(),interval 2 day) as 'TWO DAYS AFTER';
+select date_add(curdate(),interval 3 week) as 'TWO DAYS AFTER';
 
 
 
