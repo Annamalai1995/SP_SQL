@@ -171,4 +171,14 @@ select date_add(curdate(),interval 3 week) as 'TWO DAYS AFTER';
 
 
 
+-- GROUP BY AND HAVING CLAUSES
+
+select * from office_details;
+select * from office_details order by designation;
+select designation,avg(salary) from office_details group by designation;
+-- HAVING CLAUSES
+select designation,count(emp_id) from office_details group by designation having count(emp_id)>1;
+-- GROUP OF FILTER
+select designation,count(emp_id) from office_details group by designation having count(emp_id)>1 order by designation;
+select designation,count(emp_id) from office_details where salary>100000 group by designation having count(emp_id)<2 order by designation;
 
