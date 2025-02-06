@@ -182,3 +182,10 @@ select designation,count(emp_id) from office_details group by designation having
 select designation,count(emp_id) from office_details group by designation having count(emp_id)>1 order by designation;
 select designation,count(emp_id) from office_details where salary>100000 group by designation having count(emp_id)<2 order by designation;
 
+-- CONSTRAINTS
+create table office_details(emp_id int primary key auto_increment,emp_name varchar(100) not null,designation varchar(100) default "PlsAssign",
+salary int ,pan varchar(30) unique,check(salary>100000));
+desc office_details;
+insert into office_details(emp_name,salary) values('Annamalai',165000);
+select * from office_details;
+
